@@ -1,0 +1,58 @@
+.show-action-dropdowns {
+  margin: 5px;
+}
+.show-action-dropdown-button {
+  width: auto;
+  height: auto;
+  background-color: #eee;
+  padding: 5px 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.show-action-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.show-action-dropdown-content {
+  display: none;
+  max-width: 700px;
+  padding: 8px;
+  background-color: #aaa;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+.show-action-dropdown-content-actions {
+  min-width: 300px;
+  max-width: 700px;
+}
+.show-action-drowndown-content-title {
+  font-size: medium;
+}
+
+.show-action-dropdown-content-subtitle {
+  font-size: small;
+}
+/* Links inside the dropdown */
+.show-action-dropdown-content-actions button {
+  width: auto;
+  height: auto;
+  padding: 3px 5px;
+  font-size: small;
+  text-decoration: none;
+  display: inline;
+}
+
+/* Change color of dropdown links on hover */
+.show-action-dropdown-content-actions button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.show-action-dropdown:hover .show-action-dropdown-content {
+  display: block;
+}

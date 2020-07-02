@@ -1,0 +1,15 @@
+{
+  "name": "fvtt-swade-tokenbar",
+  "title": "Token Bar (SWADE)",
+  "description": "Creates a bar to control a token's actions",
+  "author": "Spacemandev",
+  "version": "0.0.1",
+  "minmumCoreVersion": "0.6.0",
+  "compatibleCoreVersion": "0.6.4",
+  "systems": ["swade"],
+  "url": "https://github.com/brownie79/fvtt-swade-tokenbar",
+  "manifest": "",
+  "download": "",
+  "esmodules": ["scripts/swade-tokenbar.js"],
+  "styles": ["styles/styles.css"]
+}
