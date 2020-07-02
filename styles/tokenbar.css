@@ -1,0 +1,28 @@
+.dropdown-list {
+  margin: 5px;
+  display: flex;
+}
+
+.dropdown-header > button {
+  width: auto;
+  height: auto;
+  background-color: black;
+  color: white;
+  padding: 5px 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  max-width: 700px;
+  padding: 8px;
+  background-color: #aaa;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.dropdown-header:hover > .dropdown-content {
+  display: block;
+}
