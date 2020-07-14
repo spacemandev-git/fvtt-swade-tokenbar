@@ -42,13 +42,13 @@ export async function generateBar() {
     if (evt.target.value == undefined) return;
     Hooks.once(`updateActor`, (updatedActor) => {
       // If the selected actor is updated (new item, skill, whatever) regenerate the bar
-      if (updatedActor.data._id == selectedActor.data._id) {
+      if (updatedActor.data._id == canvas.tokens.controlled[0].data._id) {
         generateBar();
       }
     });
     Hooks.once(`updateOwnedItem`, (updatedActor) => {
       //if a given item that the actor owns is updated then regen the bar
-      if (updatedActor.data._id == selectedActor.data._id) {
+      if (updatedActor.data._id == canvas.tokens.controlled[0].data._id) {
         generateBar();
       }
     });
@@ -77,11 +77,15 @@ async function handleEvent(evt, actor) {
     if (actor.data.data.wildcard) {
       rollString = `{1d${actor.data.data.attributes[value].die.sides}x=, 1d${
         actor.data.data.attributes[value]["wild-die"].sides
-      }x=}kh +${actor.calcWoundFatigePenalties()} +${actor.calcStatusPenalties()}`;
+      }x=}kh +${actor.calcWoundPenalties()} +${actor.calcStatusPenalties()} +${actor.calcFatiguePenalties()} +${parseInt(
+        $("#globalMod").val()
+      )}`;
     } else {
       rollString = `1d${
         actor.data.data.attributes[value].die.sides
-      }x= +${actor.calcWoundFatigePenalties()} +${actor.calcStatusPenalties()}`;
+      }x= +${actor.calcWoundPenalties()} +${actor.calcStatusPenalties()} +${actor.calcFatiguePenalties()} +${parseInt(
+        $("#globalMod").val()
+      )}`;
     }
     roll(actor, `${value.toUpperCase()} Roll`, rollString);
   } else if (type == "skill") {
@@ -90,11 +94,15 @@ async function handleEvent(evt, actor) {
     if (actor.data.data.wildcard) {
       rollString = `{1d${skill.data.data.die.sides}x=, 1d${
         skill.data.data["wild-die"].sides
-      }x=}kh +${actor.calcWoundFatigePenalties()} +${actor.calcStatusPenalties()}`;
+      }x=}kh +${actor.calcWoundPenalties()} +${actor.calcStatusPenalties()} +${actor.calcFatiguePenalties()} +${parseInt(
+        $("#globalMod").val()
+      )}`;
     } else {
       rollString = `1d${
         skill.data.data.die.sides
-      }x= +${actor.calcWoundFatigePenalties()} +${actor.calcStatusPenalties()}`;
+      }x= +${actor.calcWoundPenalties()} +${actor.calcStatusPenalties()} +${actor.calcFatiguePenalties()} +${parseInt(
+        $("#globalMod").val()
+      )}`;
     }
     roll(actor, `${value.toUpperCase()} Roll`, rollString);
   } else if (type == "status") {
@@ -179,6 +187,9 @@ function getContent(actor) {
         </div>        
       </div>
       ${ifWCSpendBenny(actor)}
+      <div>
+        <input class="globalMod" id="globalMod" value=0 />
+      </div>
       <div class="dropdown-header">
         <button value="showActionClose">[X]</button>
       </div>

@@ -15,8 +15,8 @@
 
 .dropdown-content {
   display: none;
-  max-width: 700px;
-  padding: 8px;
+  max-width: 100px;
+  padding: 4px;
   background-color: #aaa;
   position: absolute;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -25,4 +25,10 @@
 
 .dropdown-header:hover > .dropdown-content {
   display: block;
+}
+
+.globalMod {
+  width: 50px;
+  height: 38px;
+  text-align: center;
 }
