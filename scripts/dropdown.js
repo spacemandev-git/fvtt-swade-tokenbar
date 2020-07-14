@@ -57,8 +57,11 @@ export async function generateBar() {
       cancel();
       return;
     }
-
-    await handleEvent(evt, canvas.tokens.controlled[0].actor);
+    try {
+      await handleEvent(evt, canvas.tokens.controlled[0].actor);
+    } catch (e) {
+      //fail silently. usually a no actor selected problem
+    }
   });
 }
 
