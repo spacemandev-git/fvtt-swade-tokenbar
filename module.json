@@ -9,7 +9,7 @@
   "systems": ["swade"],
   "url": "https://github.com/brownie79/fvtt-swade-tokenbar",
   "manifest": "https://raw.githubusercontent.com/Brownie79/fvtt-swade-tokenbar/master/module.json",
-  "download": "https://github.com/Brownie79/fvtt-swade-tokenbar/archive/v1.1.1.zip",
+  "download": "https://github.com/Brownie79/fvtt-swade-tokenbar/archive/v1.2.0.zip",
   "esmodules": ["scripts/swade-tokenbar.js"],
   "styles": ["styles/tokenbar.css"]
 }
