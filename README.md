@@ -11,5 +11,5 @@ There's a text input for any modifier you want to add to any roll.
 ![](example.gif)
 
 # Changelog
-### 1.2
+### 1.2.1
 Fixed dice not rolling modifers properly

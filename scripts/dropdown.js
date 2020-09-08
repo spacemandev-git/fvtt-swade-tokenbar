@@ -75,9 +75,9 @@ async function handleEvent(evt, actor) {
   if (type == "attributes") {
     let rollString = "";
     if (actor.data.data.wildcard) {
-      rollString = `{1d${actor.data.data.attributes[value].die.sides}x= +${actor.data.data.attributes[value].die.modifier}, 1d${
+      rollString = `{1d${actor.data.data.attributes[value].die.sides}x=, 1d${
         actor.data.data.attributes[value]["wild-die"].sides
-      }x=}kh +${actor.calcWoundPenalties()} +${actor.calcStatusPenalties()} +${actor.calcFatiguePenalties()} +${parseInt(
+      }x=}kh +${actor.data.data.attributes[value].die.modifier} +${actor.calcWoundPenalties()} +${actor.calcStatusPenalties()} +${actor.calcFatiguePenalties()} +${parseInt(
         $("#globalMod").val()
       )}`;
     } else {
@@ -92,9 +92,9 @@ async function handleEvent(evt, actor) {
     let skill = actor.items.find((el) => el.data.name == value);
     let rollString = "";
     if (actor.data.data.wildcard) {
-      rollString = `{1d${skill.data.data.die.sides}x= +${skill.data.data.die.modifier}, 1d${
+      rollString = `{1d${skill.data.data.die.sides}x=, 1d${
         skill.data.data["wild-die"].sides
-      }x=}kh +${actor.calcWoundPenalties()} +${actor.calcStatusPenalties()} +${actor.calcFatiguePenalties()} +${parseInt(
+      }x=}kh +${skill.data.data.die.modifier} +${actor.calcWoundPenalties()} +${actor.calcStatusPenalties()} +${actor.calcFatiguePenalties()} +${parseInt(
         $("#globalMod").val()
       )}`;
     } else {

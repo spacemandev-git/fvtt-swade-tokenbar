@@ -3,13 +3,13 @@
   "title": "Token Bar (SWADE)",
   "description": "Creates a bar to control a token's actions",
   "author": "Spacemandev",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "minmumCoreVersion": "0.6.0",
   "compatibleCoreVersion": "0.6.5",
   "systems": ["swade"],
   "url": "https://github.com/brownie79/fvtt-swade-tokenbar",
   "manifest": "https://raw.githubusercontent.com/Brownie79/fvtt-swade-tokenbar/master/module.json",
-  "download": "https://github.com/Brownie79/fvtt-swade-tokenbar/archive/v1.2.0.zip",
+  "download": "https://github.com/Brownie79/fvtt-swade-tokenbar/archive/v1.2.1.zip",
   "esmodules": ["scripts/swade-tokenbar.js"],
   "styles": ["styles/tokenbar.css"]
 }
