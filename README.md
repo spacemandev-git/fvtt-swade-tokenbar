@@ -7,4 +7,9 @@ This is a token bar inspired by the 5E Tokenbar module written by Kekilla0 (http
 Creates a bar when a token is clicked on that lets you do 1 Click rolls for Attributes & Skills, spend Bennies, toggle Statuses, Increase/Decrease Wounds & Fatigue
 There's a text input for any modifier you want to add to any roll. 
 
+
 ![](example.gif)
+
+# Changelog
+### 1.2
+Fixed dice not rolling modifers properly

@@ -3,7 +3,7 @@
   "title": "Token Bar (SWADE)",
   "description": "Creates a bar to control a token's actions",
   "author": "Spacemandev",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "minmumCoreVersion": "0.6.0",
   "compatibleCoreVersion": "0.6.5",
   "systems": ["swade"],
